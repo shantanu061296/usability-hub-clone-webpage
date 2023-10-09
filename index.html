@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>UsabilityHub</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 </head>
 <body>
     <div class="top-banner">
@@ -16,7 +17,7 @@
             <a href="#" class="company-logo">
                 <img src="img/asset 1.png" alt="Company Logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-links">Products</a></li>
                     <li><a href="#" class="hover-links">Customers</a></li>
@@ -26,6 +27,9 @@
                     <li><a href="#" class="hover-links primary-btn">Sign Up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-links" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
     <header>
@@ -219,5 +223,12 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/4268a3fa7b.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleBtn=document.getElementById('nav-toggle');
+        const navLinks=document.getElementById('nav-links');
+        toggleBtn.addEventListener('click',() => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
