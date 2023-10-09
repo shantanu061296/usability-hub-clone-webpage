@@ -1,0 +1,82 @@
+/* Once properties are applied at below 991px then these are there to stay even for any smaller width*/
+@media screen and (max-width:991px) {
+    .nav-toggle{
+        display: block;
+        margin-right: 20px;
+    }
+    .main-nav{
+        overflow: initial;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: white;
+        /* as we do not want it to be visible in the start. It will be visible once toggle is clicked */
+        left: -100%;
+        top: 100%;
+        width: 100%;
+        padding: 20px;
+        transition: 0.2s ease-in-out;
+    }
+    .nav-links ul{
+        flex-direction: column;
+    }
+
+    .examples-area{
+        gap:20px;
+    }
+    .examples-card{
+        width: calc(50% - 20px);
+        height: 180px;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .header-section{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .header-left{
+        max-width: 100vw;
+        text-align: center;
+    }
+    .primary-btn{
+        width: 100%;
+    }
+    .features-card{
+        min-width: calc(50% - 10px);
+    }
+    .big-feature-container{
+        flex-direction: column;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap : 20px;
+        align-items: center;
+    }
+    .link-column{
+        align-items:center;
+    }
+}
+@media screen and (max-width:479px) {
+    :root{
+        --padding-inline-section:10px;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .features-card{
+            min-width: calc(100% - 10px);
+        }
+        .examples-card{
+             width: calc(100% - 20px);
+        }
+}
